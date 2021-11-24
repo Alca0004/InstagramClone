@@ -31,8 +31,9 @@ export default function Navigation(){
                     } else if(route.name === 'Profile'){
                         iconName = focused ? 'person' : 'person-outline'
                     }
-                    return <Ionicons name={iconName} size={size} color={color} />
-                }
+                    return <Ionicons name={iconName} size={size} color={'#000'} />
+                },
+                tabBarShowLabel: false
             })} 
             >
            
