@@ -10,10 +10,35 @@ const initialState = {
     followedBy: ['ElonMusk', 'SalvadoreDali', 'PabloPicasso']
 }
 
-export default userSlice = createSlice({
+export const userSlice = createSlice({
     name: 'user',
     initialState: initialState,
     reducers: {
-        
+        setUser: (state, action) => {
+            return{
+                ...state,
+                username: action.payload.username, 
+                profilePicture: action.payload.profilePicture,
+                followers: state.followers,
+                following: state.following,
+                post: state.post,
+                about: state.about,
+                followedBy: state.followedBy,
+            }
+        },
+        logout: (state) => {
+            return{
+                ...state,
+                username: "",
+                followers: 0,
+                following: 0,
+                post: 0,
+                about: "",
+                followedBy: [],
+            }
+        }
     }
-})
+});
+
+export const {setUser, logout} = userSlice.actions;
+export default userSlice.reducer;
