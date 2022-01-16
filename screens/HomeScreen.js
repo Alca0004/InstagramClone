@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import {Text, View} from "react-native";
 import axios from "axios";
 import { useDispatch, useSelector} from "react-redux";
-import {setUser} from '../redux/slices/userSlice'
+import { setUser } from '../redux/slices/userSlice';
 
 export default function HomeScreen(){
 
@@ -20,8 +20,8 @@ export default function HomeScreen(){
             profilePicture: user.data.results[0].picture.large,
         }
         console.log(newUser);
-    
-    };
+        dispatch(setUser(newUser));
+;    };
  
     return (
         <View>

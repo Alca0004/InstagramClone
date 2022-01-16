@@ -30,6 +30,7 @@ export const userSlice = createSlice({
             return{
                 ...state,
                 username: "",
+                profilePictures: "",
                 followers: 0,
                 following: 0,
                 post: 0,
