@@ -20,15 +20,14 @@ export default function HomeScreen(){
             profilePicture: user.data.results[0].picture.large,
         }
         console.log(newUser);
-        dispatch(setUser(newUser));
-;    };
+        dispatch(setUser(newUser))
+    };
  
     return (
         <View>
             <Text>HomeScreen</Text>
             <Text>{user.username}</Text>
-            <Text>{user.profilePicture}</Text>
-
+            <Text>{user.profilePicture}</Text> 
         </View>
     )
 };

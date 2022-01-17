@@ -3,9 +3,9 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
     username: "",
     profilePicture: "",
-    followers: 100,
-    following: 200,
-    post: 10,
+    followers: 783,
+    following: 1564,
+    posts: 350,
     about: 'So many of my smiles are because of you.',
     followedBy: ['ElonMusk', 'SalvadoreDali', 'PabloPicasso']
 }
@@ -21,7 +21,7 @@ export const userSlice = createSlice({
                 profilePicture: action.payload.profilePicture,
                 followers: state.followers,
                 following: state.following,
-                post: state.post,
+                posts: state.posts,
                 about: state.about,
                 followedBy: state.followedBy,
             }
@@ -33,7 +33,7 @@ export const userSlice = createSlice({
                 profilePictures: "",
                 followers: 0,
                 following: 0,
-                post: 0,
+                posts: 0,
                 about: "",
                 followedBy: [],
             }
