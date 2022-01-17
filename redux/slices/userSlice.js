@@ -6,8 +6,8 @@ const initialState = {
     followers: 783,
     following: 1564,
     posts: 350,
-    about: 'So many of my smiles are because of you.',
-    followedBy: ['ElonMusk', 'SalvadoreDali', 'PabloPicasso']
+    about: 'Learning React Native Expo, Redux, Hooks, etc...',
+    followedBy: ['ElonMusk', 'SalvadorDali', 'PabloPicasso']
 }
 
 export const userSlice = createSlice({
